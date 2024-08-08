@@ -8,6 +8,7 @@
     <Title>DiServiceInstaller</Title>
     <Description>Adding services to dependency injection container in a cleaner and more maintainable way</Description>
     <RepositoryUrl>https://github.com/M0BIN-V/DiServiceInstaller</RepositoryUrl>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
