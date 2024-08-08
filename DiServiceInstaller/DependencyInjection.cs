@@ -14,7 +14,7 @@ public static class DependencyInjection
         var installers = assemblies
             .SelectMany(a => a.DefinedTypes)
             .Where(a => !a.IsAbstract && !a.IsInterface && a
-                .IsAssignableFrom(typeof(IServiceInstaller)))
+                .IsAssignableTo(typeof(IServiceInstaller)))
             .Select(Activator.CreateInstance)
             .Cast<IServiceInstaller>();
 
