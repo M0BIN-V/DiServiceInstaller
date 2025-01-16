@@ -1,14 +1,14 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
+using Microsoft.AspNetCore.Builder;
 
 namespace DiServiceInstaller;
 
 public static class DependencyInjection
 {
-    public static IServiceCollection InstallServices(
-        this IServiceCollection services,
-        IConfiguration configuration,
+    public static IApplicationBuilder InstallServices(
+        this IApplicationBuilder applicationBuilder,
         params Assembly[] assemblies)
     {
         var installers = assemblies
@@ -20,9 +20,9 @@ public static class DependencyInjection
 
         foreach (var installer in installers)
         {
-            installer.Install(services, configuration);
+            installer.Install(applicationBuilder);
         }
 
-        return services;
+        return applicationBuilder;
     }
 }

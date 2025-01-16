@@ -1,9 +1,10 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace DiServiceInstaller;
 
 public interface IServiceInstaller
 {
-    void Install(IServiceCollection services, IConfiguration configuration);
+    void Install(IApplicationBuilder builder);
 }
