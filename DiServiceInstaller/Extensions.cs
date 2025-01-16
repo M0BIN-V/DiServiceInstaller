@@ -1,12 +1,12 @@
 ﻿using System.Reflection;
-using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.Hosting;
 
 namespace DiServiceInstaller;
 
 public static class Extensions
 {
-    public static IApplicationBuilder InstallServices(
-        this IApplicationBuilder applicationBuilder,
+    public static IHostApplicationBuilder InstallServices(
+        this IHostApplicationBuilder applicationBuilder,
         params Assembly[] assemblies)
     {
         var installers = assemblies

@@ -6,7 +6,6 @@
 - [Installation](#installation)
 - [Usage](#usage)
 
-
 ### Installation
 
 To install `DiServiceInstaller`, use the following command in your terminal:
@@ -25,15 +24,15 @@ Program.cs
 
 ```csharp
 var builder = WebApplication.CreateBuilder(args);
-builder.InstallServices();
+builder.InstallServices(typeof(Program).Assembly);
 ```
 
-### Installer 
+### Installer
 
 ```csharp
 public class DbServiceInstaller : IServiceInstaller
 {
-    public void Install(IApplicatoinBuilder builder)
+    public void Install(IHostApplicationBuilder builder)
     {
         
         Builder.Services.AddDbContext<AppDbContext>(options =>

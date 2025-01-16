@@ -8,25 +8,25 @@
         <Title>DiServiceInstaller</Title>
         <Description>Adding services to dependency injection container in a cleaner and more maintainable way</Description>
         <RepositoryUrl>https://github.com/M0BIN-V/DiServiceInstaller</RepositoryUrl>
-        <Version>2.0.0</Version>
+        <Version>2.1.0</Version>
         <PackageLicenseFile>LICENCE</PackageLicenseFile>
         <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
 
     <ItemGroup>
-      <None Include="..\LICENCE">
-        <Pack>True</Pack>
-        <PackagePath>\</PackagePath>
-      </None>
-      <None Include="..\README.md">
-        <Pack>True</Pack>
-        <PackagePath>\</PackagePath>
-      </None>
+        <None Include="..\LICENCE">
+            <Pack>True</Pack>
+            <PackagePath>\</PackagePath>
+        </None>
+        <None Include="..\README.md">
+            <Pack>True</Pack>
+            <PackagePath>\</PackagePath>
+        </None>
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.3.0" />
-        <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="9.0.1" />
-        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.1" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="9.0.1"/>
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.1"/>
+        <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="9.0.1"/>
     </ItemGroup>
 </Project>
